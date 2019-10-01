@@ -1,0 +1,31 @@
+<p>directives works!</p>
+<!-- <div *ngIf="islogedin">
+  <h2>you are successfully loged in</h2>
+  <h3>employee details</h3>
+</div>
+<div *ngIf="!islogedin">
+  <h2>Login Failed</h2>
+  <h3>First login</h3>
+</div> -->
+
+<!-- <h3>Demo 2</h3>
+<div *ngIf="islogedin || isnewuser">
+  <h2>you are successfully loged in</h2>
+  <h3>employee details</h3>
+</div>
+<div *ngIf="!(islogedin || isnewuser)">
+  <h2>Login Failed</h2>
+  <h3>First login</h3>
+</div> -->
+
+<h3>Demo 3</h3>
+<div *ngIf="islogedin else loggedout">
+  <h2>you are successfully loged in</h2>
+  <h3>employee details</h3>
+  <ul *ngFor="let emp of employees">
+    <li>{{emp.empid}} {{emp.empname}} {{emp.salary|currency:"INR":true}}</li>
+  </ul>
+</div>
+<ng-template #loggedout>
+  <h2>logout successfully please login first</h2>
+</ng-template>

@@ -1,0 +1,41 @@
+<p>pipes works!</p>
+<h3>currency pipes</h3>
+<p>customer amount :{{customer.ammount}}</p>
+<p>customer amount :{{customer.ammount| currency}}</p>
+
+<p>customer amount :{{customer.ammount|currency:"USD":false}}</p>
+
+<p>customer amount :{{customer.ammount|currency:"INR":false}}</p>
+<p>customer amount :{{customer.ammount|currency:"INR":true}}</p>
+
+<p>customer amount :{{customer.ammount|currency:"INR":true}}</p>
+
+<h3>charector pipes</h3>
+
+<p>customer name : {{customer.fristname+" "+customer.lastname}}</p>
+<p>customer first name : {{customer.fristname|lowercase}}</p>
+<p>customer last name : {{customer.lastname|uppercase}}</p>
+
+<h3>percentage pipes</h3>
+<p>percentage : {{customer.persentage|percent}}</p>
+
+<h3>slice pipes</h3>
+<p>user pipes without slice: {{customer.msg}}</p>
+<p>user pipes : {{customer.msg|slice: 3:5}}</p>
+<p>user pipes : {{customer.msg|slice: 2:-5}}</p>
+
+<h3>date pipes</h3>
+<p>sales date without pipe :{{customer.salesdate}}</p>
+<p>sales date:{{customer.salesdate|date:"shortTime"}}</p>
+<p>sales date without pipe :{{customer.salesdate|date:"d/M/y"}}</p>
+
+<h3>Json Pipe</h3>
+<p>customer Details: {{customer|json}}</p>
+
+<h3>custome pipes</h3>
+<p>{{customer.lastname | welcome}}</p>
+
+<h3>Division pipe</h3>
+<p>Dividend : <input [(ngModel)]="dividend"></p>
+<p>Divisor : <input [(ngModel)]="divisor"></p>
+<p>Result : {{dividend|division:divisor}}</p>

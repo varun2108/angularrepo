@@ -1,0 +1,38 @@
+<p>second works!</p>
+<h3> Interpolation </h3>
+<p>{{title}}</p>
+<!-- interpolation model to view or component to view-->
+<p>customer code{{customerdetails.customercode}}</p>
+<p>customername{{customerdetails.customername}}</p>
+<p>ammount{{customerdetails.customerammount}}</p>
+
+<h3>one way binding component to the view</h3>
+<p>custoemer id: <input type="text" name="customercode" id="" [value]="customerdetails.customercode"></p>
+<p>custoemer name: <input type="text" name="customername" id="" [value]="customerdetails.customername"></p>
+<p>customer ammount: <input type="text" name="customerammount" id="" [value]="customerdetails.customerammount"></p>
+
+<h3>one way binding view to the component</h3>
+<p>custoemer id: <input type="text" name="customercode" id="" (input)="customerdetails.customercode=$event.target.value"></p>
+<p>custoemer name: <input type="text" name="customername" id="" (input)="customerdetails.customername=$event.target.value"></p>
+<p>customer ammount: <input type="text" name="customerammount" id="" (input)="customerdetails.customerammount=$event.target.value"></p>
+
+<h3>two way binding treditional</h3>
+<p>custoemer id: <input type="text" name="customercode" id="" [value]="customerdetails.customercode" (input)="customerdetails.customercode=$event.target.value"></p>
+<p>custoemer name: <input type="text" name="customername" id="" [value]="customerdetails.customername" (input)="customerdetails.customername=$event.target.value"></p>
+<p>customer ammount: <input type="text" name="customerammount" id="" [value]="customerdetails.customerammount" (input)="customerdetails.customerammount=$event.target.value"></p>
+
+<h3>two way binding new</h3>
+<p>custoemer id: <input type="text" name="customercode" id="" [(ngModel)]="customerdetails.customercode" ></p>
+<p>custoemer name: <input type="text" name="customername" id="" [(ngModel)]="customerdetails.customername" ></p>
+<p>customer ammount: <input type="text" name="customerammount" id="" [(ngModel)]="customerdetails.customerammount" ></p>
+
+<h3>event binging</h3>
+<p>username: <input type="text" name="username" id="" [(ngModel)]="userdetails.username" ></p>
+<p>password: <input type="password" name="password" id="" [(ngModel)]="userdetails.password" ></p>
+<p><input type="button" value="clickme" (click)="clickme()"></p>
+
+{{result}}
+
+<img [src]="imgurl" [height]="imgheight">
+
+
